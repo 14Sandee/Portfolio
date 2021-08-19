@@ -55,6 +55,10 @@ nav{
     background-color: #fff;
     transition: all .2s ease-in;
 }
+.project-link{
+    text-decoration: none;
+    color: #fff;
+}
 .menuline2{
     margin-top: 10px;
     width: 22px;
