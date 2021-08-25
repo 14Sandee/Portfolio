@@ -71,7 +71,7 @@ gsap.from(".circle", {
     delay: 1
 })
 
-gsap.from(".about__left p, .para", {
+gsap.from(".about__left p, .para, .techstack", {
     scrollTrigger: {
         trigger: "header",
         start: "bottom 55%",
@@ -92,7 +92,7 @@ gsap.from(".animate", {
         stagger: .2,
         y: 20,
         opacity: 0,
-        duration: 1.5,
+        duration: 1.2,
         ease: Expo.easeInOut
 })
 

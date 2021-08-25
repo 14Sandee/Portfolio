@@ -86,12 +86,15 @@ nav{
 }
 .navlinks ul li{
     list-style-type: none;
+    margin-bottom: 20px;
+}
+.navlinks ul li a{
+    text-decoration: none;
     color: #fff;
     font-size: 12vw;
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     font-feature-settings: "ss02" on,"ss03" on;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 .navmenubottom{
     position: absolute;
@@ -144,6 +147,20 @@ nav{
     transform: translate(-50%, -50%);
     color: #fff;
 }
+.center a{
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to right, red, red 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
+}
+.center a:hover{
+    background-position: 0 100%;
+}
 .overlay{
     display: flex;
     flex-direction: column;
@@ -162,11 +179,15 @@ nav{
 }
 .letter{
     display: inline;
+    letter-spacing: -0.02em;
     color: #fff;
     font-size: 10vw;
     font-weight: 400;
     line-height: 0.9;
     font-feature-settings: "ss02" on,"ss03" on;
+}
+.red{
+    color: rgb(228, 35, 35) !important;
 }
 .headspan{
     color: red;
@@ -258,13 +279,14 @@ nav{
 }
 .about__rightPara{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .para__left{
-    width: 48%;
+    display: flex;
 }
-.para__right{
-    width: 48%;
+.para:nth-child(2){
+    margin-left: 25px;
 }
 .para{
     margin-bottom: 30px;
@@ -273,10 +295,22 @@ nav{
     font-size: 1vw;
     font-family: "Stein";
     line-height: 1.2;
+    flex: 1;
+}
+.techstack{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.techstack img{
+    width: 48px;
+    margin-right: 15px;
+    margin-bottom: 20px;
 }
 .hall__of__fame{
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     padding-top: 100px;
     background-color: #000;
     display: flex;
@@ -416,7 +450,7 @@ nav{
     left: 50%;
     transform: translate(-50%, 0);
     position: absolute;
-    bottom: 0;
+    bottom: 30%;
     text-align: center;
 }
 .credit p{
@@ -437,13 +471,15 @@ nav{
     text-decoration: none;
 }
 .ml-sm{
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 .ml-negative-sm{
     margin-left: -20px;
 }
-
+.space{
+    height: 10vh;
+}
 @keyframes rotate{
     from{
         transform: rotate(0deg);
@@ -463,7 +499,6 @@ nav{
     nav{
         padding: 20px;
     }
-
     .circle{
         width: 100px;
         height: 100px;
@@ -482,11 +517,12 @@ nav{
         display: none;
     }
     .letter{
-        font-size: 12vw;
-        letter-spacing: -0.05em;
+        font-size: 16vw;
+        line-height: 1;
+        letter-spacing: -0.0em;
     }
     .ml-sm{
-        margin-left: 10px;
+        margin-left: 15px;
     }
     .mr-sm{
         margin-right: 8px;
@@ -527,13 +563,17 @@ nav{
     }
     .para__left{
         width: 100%;
+        flex-direction: column;
     }
-    .para__right{
-        width: 100%;
+    .para:nth-child(2){
+        margin-left: 0px;
     }
     .para{
         margin-bottom: 20px;
         font-size: 15px;
+    }
+    .techstack{
+        width: 100%;
     }
     .parallax{
         margin-top: 50px;
